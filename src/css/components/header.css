@@ -16,7 +16,7 @@ $primary:var(--hiq-primary-color);
   }
 }
 
---bs-theme-bg:var(--hiq-header-background-color);
+
 
 .header {
   position: sticky;
