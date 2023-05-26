@@ -1,4 +1,22 @@
 /* Header */
+@import "functions";
+@import "variables";
+@import "variables-dark";
+
+/* customize primary dark */
+$primary:var(--hiq-primary-color);
+
+[data-bs-theme="dark"] {
+  --bs-primary: #{$primary};
+  --bs-primary-bg-subtle: #{$primary};
+  --bs-primary-bg-subtle-dark: #{$primary};
+  
+  .btn-primary {
+    --bs-btn-bg: #{$primary};
+  }
+}
+
+--bs-theme-bg:var(--hiq-header-background-color);
 
 .header {
   position: sticky;
@@ -14,4 +32,9 @@
   &.has-banner {
     margin-bottom: 0;
   }
+}
+.navbar-menu { 
+ 	position: absolute;
+ 	right: 30px;
+    top: 5px;
 }
