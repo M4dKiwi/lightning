@@ -15,6 +15,7 @@
   const applyClass = (value) => {
     html.classList.remove(THEME.dark, THEME.light, THEME.system)
     html.classList.add(value)
+    html.setAttribute('data-bs-theme', value)
   }
 
   // Variables
