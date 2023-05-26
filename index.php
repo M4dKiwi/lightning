@@ -132,38 +132,47 @@ if ($menuObj->getActive() == $menuObj->getDefault() && $hideComponent)
 	
 </head>
 <body class="site-grid site <?php echo $pageclass . $hasSidebar; ?>">
-	<header class="grid-child container-header full-width header <?php echo $this->countModules('banner') ? 'has-banner' : ''; ?>">
-		<nav class="navbar">
-			<div class="navbar-brand">
-				<a href="<?php echo $this->baseurl; ?>/">
-					<?php echo $logo; ?>
-					<span class="sr-only"><?php echo Text::_('TPL_LIGHTNING_LOGO_LABEL'); ?></span>
-				</a>
-				<?php if ($this->params->get('siteDescription')) : ?>
-					<div><?php echo htmlspecialchars($this->params->get('siteDescription')); ?></div>
-				<?php endif; ?>
-			</div>
-
-			<?php if ($this->countModules('menu') || $this->countModules('search')) : ?>
-				<div class="navbar-menu">
-					<?php echo $menu; ?>
-					<?php if ($this->countModules('search')) : ?>
-						<div class="navbar-end">
-							<?php echo $search; ?>
-						</div>
+<header class="grid-child container-header shadow full-width header <?php echo $this->countModules('banner') ? 'has-banner' : ''; ?>">
+	
+	<div class="row">
+		 <div class="col">
+			<nav class="navbar">
+				<div class="navbar-brand">
+					<a href="<?php echo $this->baseurl; ?>/">
+						<?php echo $logo; ?>
+						<span class="sr-only"><?php echo Text::_('TPL_LIGHTNING_LOGO_LABEL'); ?></span>
+					</a>
+					<?php if ($this->params->get('siteDescription')) : ?>
+						<div><?php echo htmlspecialchars($this->params->get('siteDescription')); ?></div>
 					<?php endif; ?>
 				</div>
-				<span id="navbar-menu-toggle" class="navbar-menu-toggle"><span></span></span>
-			<?php endif; ?>
-			<?php if ($themeSwitcher) : ?>
-				<div class="color-scheme-switch" id="color-scheme-switch">
-					<input type="radio" name="color-scheme-switch" value="is-light" class="color-scheme-switch-radio" aria-label="Light color scheme">
-					<input type="radio" name="color-scheme-switch" value="is-system" class="color-scheme-switch-radio" aria-label="System color scheme">
-					<input type="radio" name="color-scheme-switch" value="is-dark" class="color-scheme-switch-radio" aria-label="Dark color scheme">
-					<label class="color-scheme-switch-label" for="color-scheme-switch"></label>
+         
+				<?php if ($this->countModules('menu') || $this->countModules('search')) : ?>
+					<div class="navbar-menu">
+						<?php echo $menu; ?>
+						<?php if ($this->countModules('search')) : ?>
+							<div class="navbar-end">
+								<?php echo $search; ?>
+					</div>
+						<?php endif; ?>
+					
+					<span id="navbar-menu-toggle" class="navbar-menu-toggle"><span></span></span>
+				<?php endif; ?>
+					<Div class="col-auto d-flex">
+					<?php if ($themeSwitcher) : ?>
+						<div class="color-scheme-switch" id="color-scheme-switch">
+							<input type="radio" name="color-scheme-switch" value="is-light" class="color-scheme-switch-radio" aria-label="Light color scheme">
+							<input type="radio" name="color-scheme-switch" value="is-system" class="color-scheme-switch-radio" aria-label="System color scheme">
+							<input type="radio" name="color-scheme-switch" value="is-dark" class="color-scheme-switch-radio" aria-label="Dark color scheme">
+							<label class="color-scheme-switch-label" for="color-scheme-switch"></label>
+									<?php endif; ?>
+						</div>
+					</div>
 				</div>
-			<?php endif; ?>
-		</nav>
+			</nav>
+		</div>
+	</div>
+	
 	</header>
 
 	<?php if ($this->countModules('banner')) : ?>
