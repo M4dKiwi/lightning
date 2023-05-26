@@ -1,38 +1,48 @@
 /* Header */
 @import "functions";
+
 @import "variables";
+
 @import "variables-dark";
 
 /* customize primary dark */
 $primary:var(--hiq-primary-color);
 
 [data-bs-theme="dark"] {
-  --bs-primary: #{$primary};
-  --bs-primary-bg-subtle: #{$primary};
-  --bs-primary-bg-subtle-dark: #{$primary};
-  
-  .btn-primary {
-    --bs-btn-bg: #{$primary};
+	--bs-primary: #{$primary;
+};
+
+--bs-primary-bg-subtle: # {
+	$primary;
+};
+
+--bs-primary-bg-subtle-dark: # {
+	$primary;
+};
+
+.btn-primary {
+	--bs-btn-bg: #{$primary;
+};
   }
 }
 
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  height: var(--navbar-height);
-  margin-bottom: 1.5rem;
-  padding: .5rem 1.5rem;
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .1);
-  background-color: var(--hiq-header-background-color);
-  line-height: calc(var(--navbar-height) - 1rem);
-
-  &.has-banner {
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	height: var(--navbar-height);
+	margin-bottom: 1.5rem;
+	padding: .5rem 1.5rem;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .1);
+	background-color: var(--hiq-header-background-color);
+	line-height: calc(var(--navbar-height) - 1rem);
+	&.has-banner {
     margin-bottom: 0;
-  }
 }
-.navbar-menu { 
- 	position: absolute;
- 	right: 30px;
-    top: 5px;
+}
+
+.navbar-menu {
+	position: absolute;
+	right: 30px;
+	top: 5px;
 }
